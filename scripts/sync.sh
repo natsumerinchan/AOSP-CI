@@ -17,8 +17,10 @@ export DT_LINK=https://github.com/Evolution-X-Devices/device_oneplus_fajita.git
 # Change to the Home Directory
 cd ~
 
-wget https://github.com/snnbyyds/vendor_evolution/commit/78cbaec30a19516833b85ca71af7b9f9b289b444.patch
-cat 78cbaec30a19516833b85ca71af7b9f9b289b444.patch
+#wget https://github.com/snnbyyds/vendor_evolution/commit/78cbaec30a19516833b85ca71af7b9f9b289b444.patch
+#cat 78cbaec30a19516833b85ca71af7b9f9b289b444.patch
+wget https://github.com/snnbyyds/system_sepolicy/commit/fb5f19e95aca26485afba5a4082a41468e193098.patch
+cat fb5f19e95aca26485afba5a4082a41468e193098.patch
 # repo!
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
@@ -48,7 +50,10 @@ repo sync -j6
 
 cd ~/android && pwd
 cd vendor/evolution
-git apply ~/*.patch
+#git apply ~/78cbaec30a19516833b85ca71af7b9f9b289b444.patch
+cd ~/android
+cd system/sepolicy
+git apply ~/fb5f19e95aca26485afba5a4082a41468e193098.patch
 cd ~/android
 # Clone Device Specific(fallback)
 rm -rf device/oneplus/fajita
