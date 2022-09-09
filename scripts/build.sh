@@ -11,7 +11,7 @@ export BRANCH=tiramisu
 export FALLBACK=snow
 
 export USE_CCACHE=1
-export CCACHE_SIZE=50G
+export CCACHE_SIZE=60G
 export ALLOW_MISSING_DEPENDENCIES=true
 export LC_ALL="C"
 export TARGET_KERNEL_CLANG_COMPILE=false
@@ -31,7 +31,7 @@ cd ~/android
 
 # Set-up ccache
 if [ -z "$CCACHE_SIZE" ]; then
-    ccache -M 50G
+    ccache -M 60G
 else
     ccache -M ${CCACHE_SIZE}
 fi
