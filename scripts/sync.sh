@@ -12,8 +12,6 @@ export AOSP=evolution
 export BRANCH=tiramisu
 export FALLBACK=snow
 
-export DT_LINK=https://github.com/Evolution-X-Devices/device_oneplus_fajita.git
-
 # Change to the Home Directory
 cd ~
 
@@ -64,7 +62,7 @@ git clone -b lineage-19.1 https://github.com/snnbyyds/android_device_oneplus_sdm
 ls device/oneplus/sdm845-common
 
 # Clone the Kernel Sources(fallback)
-git clone --depth=1 -b dot11 https://github.com/snnbyyds/android_kernel_oneplus_fajita.git kernel/oneplus/sdm845
+git clone --depth=1 -b lineage-20.0 https://github.com/EdwinMoq/android_kernel_oneplus_sdm845.git kernel/oneplus/sdm845
 #git clone -b ElementalX-6.00 https://github.com/flar2/OnePlus6.git kernel/oneplus/sdm845
 #git clone https://github.com/CherishOS-Devices/kernel_oneplus_sdm845.git kernel/oneplus/sdm845
 #git clone -b oos11 https://github.com/ppajda/android_kernel_oneplus_sdm845.git kernel/oneplus/sdm845
@@ -75,11 +73,6 @@ git clone --depth=1 -b dot11 https://github.com/snnbyyds/android_kernel_oneplus_
 #git clone -b oneplus/SDM845_R_11.0 https://github.com/snnbyyds/android_kernel_oneplus_sdm845-1.git kernel/oneplus/sdm845
 #git clone -b oneplus/SDM845_R_11.0 https://github.com/OnePlusOSS/android_kernel_oneplus_sdm845_techpack_audio.git kernel/oneplus/sdm845/techpack/audio
 
-cp kernel/oneplus/sdm845/arch/arm64/configs/kronic_defconfig kernel/oneplus/sdm845/arch/arm64/configs/enchilada_defconfig
-git clone https://github.com/LineageOS/android_kernel_oneplus_sdm845.git ~/android_kernel_oneplus_sdm845
-rm -rf kernel/oneplus/sdm845/include/uapi/media/msm_media_info.h kernel/oneplus/sdm845/include/uapi/linux/videodev2.h
-cp -r  ~/android_kernel_oneplus_sdm845/include/uapi/media/msm_media_info.h kernel/oneplus/sdm845/include/uapi/media/
-cp -r  ~/android_kernel_oneplus_sdm845/include/uapi/linux/videodev2.h kernel/oneplus/sdm845/include/uapi/linux/
 # Additional(fallback)
 
 git clone -b lineage-19.1 https://github.com/snnbyyds/android_hardware_oneplus.git hardware/oneplus
