@@ -14,7 +14,7 @@ export USE_CCACHE=1
 export CCACHE_SIZE=60G
 export ALLOW_MISSING_DEPENDENCIES=true
 export LC_ALL="C"
-export TARGET_KERNEL_CLANG_COMPILE=false
+
 ##########################
 
 # A Function to Send Posts to Telegram
