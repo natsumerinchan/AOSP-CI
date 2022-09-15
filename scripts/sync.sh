@@ -70,8 +70,6 @@ git clone --depth=1 -b lineage-20.0 https://github.com/EdwinMoq/android_kernel_o
 #git clone -b nethunter-11.0 https://github.com/snnbyyds/nethunter_kernel_oneplus_sdm845-3.git kernel/oneplus/sdm845
 #git clone -b snow https://github.com/Evolution-X-Devices/kernel_oneplus_sdm845.git kernel/oneplus/sdm845
 #git clone -b lineage-19.1 https://github.com/snnbyyds/android_kernel_oneplus_sdm845.git ~/android_kernel_oneplus_sdm845
-#git clone -b oneplus/SDM845_R_11.0 https://github.com/snnbyyds/android_kernel_oneplus_sdm845-1.git kernel/oneplus/sdm845
-#git clone -b oneplus/SDM845_R_11.0 https://github.com/OnePlusOSS/android_kernel_oneplus_sdm845_techpack_audio.git kernel/oneplus/sdm845/techpack/audio
 
 # Additional(fallback)
 
