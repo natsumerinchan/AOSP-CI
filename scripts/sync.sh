@@ -62,7 +62,7 @@ git clone -b lineage-19.1 https://github.com/snnbyyds/android_device_oneplus_sdm
 ls device/oneplus/sdm845-common
 
 # Clone the Kernel Sources(fallback)
-#git clone --depth=1 -b lineage-20.0 https://github.com/EdwinMoq/android_kernel_oneplus_sdm845.git kernel/oneplus/sdm845
+git clone --depth=1 -b lineage-20.0 https://github.com/EdwinMoq/android_kernel_oneplus_sdm845.git kernel/oneplus/sdm845
 #git clone -b ElementalX-6.00 https://github.com/flar2/OnePlus6.git kernel/oneplus/sdm845
 #git clone https://github.com/CherishOS-Devices/kernel_oneplus_sdm845.git kernel/oneplus/sdm845
 #git clone -b oos11 https://github.com/ppajda/android_kernel_oneplus_sdm845.git kernel/oneplus/sdm845
@@ -70,8 +70,10 @@ ls device/oneplus/sdm845-common
 #git clone -b nethunter-11.0 https://github.com/snnbyyds/nethunter_kernel_oneplus_sdm845-3.git kernel/oneplus/sdm845
 #git clone -b snow https://github.com/Evolution-X-Devices/kernel_oneplus_sdm845.git kernel/oneplus/sdm845
 #git clone -b lineage-19.1 https://github.com/snnbyyds/android_kernel_oneplus_sdm845.git ~/android_kernel_oneplus_sdm845
-git clone -b 12 https://github.com/Havoc-fajita/a12kernel_oneplus_sdm845.git kernel/oneplus/sdm845
-mv kernel/oneplus/sdm845/arch/arm64/configs/primus_defconfig kernel/oneplus/sdm845/arch/arm64/configs/enchilada_defconfig
+#git clone -b 12 https://github.com/Havoc-fajita/a12kernel_oneplus_sdm845.git kernel/oneplus/sdm845
+#mv kernel/oneplus/sdm845/arch/arm64/configs/primus_defconfig kernel/oneplus/sdm845/arch/arm64/configs/enchilada_defconfig
+
+git clone https://github.com/radcolor/aarch64-elf.git prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
 # Additional(fallback)
 
 git clone -b lineage-19.1 https://github.com/snnbyyds/android_hardware_oneplus.git hardware/oneplus
