@@ -78,6 +78,8 @@ git clone https://github.com/radcolor/aarch64-elf.git prebuilts/gcc/linux-x86/aa
 cd ~
 wget https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/+archive/refs/heads/idea133-weekly-release.tar.gz
 cd ~/android
+mkdir prebuilts/gcc/linux-x86/arm
+mkdir prebuilts/gcc/linux-x86/arm/arm-eabi
 cd prebuilts/gcc/linux-x86/arm/arm-eabi
 tar -xpvf ~/arm-eabi*gz
 cd ~/android
