@@ -73,10 +73,17 @@ git clone --depth=1 -b lineage-20.0 https://github.com/EdwinMoq/android_kernel_o
 #git clone -b 12 https://github.com/Havoc-fajita/a12kernel_oneplus_sdm845.git kernel/oneplus/sdm845
 #mv kernel/oneplus/sdm845/arch/arm64/configs/primus_defconfig kernel/oneplus/sdm845/arch/arm64/configs/enchilada_defconfig
 
-git clone https://github.com/radcolor/aarch64-elf.git prebuilts/gcc/linux-x86/aarch64/aarch64-elf/bin
+git clone https://github.com/radcolor/aarch64-elf.git prebuilts/gcc/linux-x86/aarch64/aarch64-elf
+#wget https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu/12.2.mpacbti-bet1/binrel/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi.tar.xz
+cd ~
+wget https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/+archive/refs/heads/idea133-weekly-release.tar.gz
+cd ~/android
+cd prebuilts/gcc/linux-x86/arm/arm-eabi
+tar -xpvf ~/arm-eabi*gz
+cd ~/android
 # Additional(fallback)
 
-git clone -b lineage-19.1 https://github.com/snnbyyds/android_hardware_oneplus.git hardware/oneplus
+git clone -b lineage-20 https://github.com/LineageOS/android_hardware_oneplus.git hardware/oneplus
 
 # Additional
 #git clone -b $BRANCH https://github.com/Evolution-X-Devices/vendor_oneplus.git vendor/oneplus
