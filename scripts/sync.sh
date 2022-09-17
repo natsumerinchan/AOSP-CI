@@ -62,7 +62,7 @@ git clone -b lineage-19.1 https://github.com/snnbyyds/android_device_oneplus_sdm
 ls device/oneplus/sdm845-common
 
 # Clone the Kernel Sources(fallback)
-git clone --depth=1 -b lineage-19.1 https://github.com/Linux-Mobile/android_kernel_oneplus_sdm845.git kernel/oneplus/sdm845
+git clone --depth=1 -b lineage-20 https://github.com/Linux-Mobile/android_kernel_oneplus_sdm845.git kernel/oneplus/sdm845
 
 
 git clone https://github.com/radcolor/aarch64-elf.git prebuilts/gcc/linux-x86/aarch64/aarch64-elf
