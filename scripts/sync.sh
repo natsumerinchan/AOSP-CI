@@ -23,7 +23,7 @@ cat fb5f19e95aca26485afba5a4082a41468e193098.patch
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 
-# FUCK BIGFOOTACA
+# FUCK H
 rm -rf ~/android
 mkdir ~/android
 cd ~/android
