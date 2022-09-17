@@ -64,15 +64,19 @@ ls device/oneplus/sdm845-common
 # Clone the Kernel Sources(fallback)
 git clone --depth=1 -b lineage-20 https://github.com/Linux-Mobile/android_kernel_oneplus_sdm845.git kernel/oneplus/sdm845
 
+git clone --depth=1 -b dot11 https://github.com/snnbyyds/android_kernel_oneplus_fajita.git ~/android_kernel_oneplus_fajita
+rm -rf kernel/oneplus/sdm845/drivers/staging/qcacld-3.0
 
-git clone https://github.com/radcolor/aarch64-elf.git prebuilts/gcc/linux-x86/aarch64/aarch64-elf
+cp -r ~/android_kernel_oneplus_sdm845/drivers/staging/qcacld-3.0 kernel/oneplus/sdm845/drivers/staging/
+
+#git clone https://github.com/radcolor/aarch64-elf.git prebuilts/gcc/linux-x86/aarch64/aarch64-elf
 #wget https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu/12.2.mpacbti-bet1/binrel/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi.tar.xz
 cd ~
-wget https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/+archive/refs/heads/idea133-weekly-release.tar.gz
+#wget https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/+archive/refs/heads/idea133-weekly-release.tar.gz
 cd ~/android
 mkdir prebuilts/gcc/linux-x86/arm/arm-eabi
 cd prebuilts/gcc/linux-x86/arm/arm-eabi
-tar -xpvf ~/idea133-weekly-release.tar.gz
+#tar -xpvf ~/idea133-weekly-release.tar.gz
 cd ~/android
 # Additional(fallback)
 
