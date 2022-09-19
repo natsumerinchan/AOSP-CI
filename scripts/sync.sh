@@ -16,6 +16,8 @@ export FALLBACK=snow
 cd ~
 wget https://github.com/snnbyyds/system_sepolicy/commit/fb5f19e95aca26485afba5a4082a41468e193098.patch
 cat fb5f19e95aca26485afba5a4082a41468e193098.patch
+wget https://github.com/snnbyyds/vendor_evolution/commit/f8aa0dfac15f5b8e784937cb2ad564fa5c300f1f.patch
+cat f8aa0dfac15f5b8e784937cb2ad564fa5c300f1f.patch
 
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
@@ -46,6 +48,8 @@ repo sync -j6
 cd ~/android && pwd
 cd system/sepolicy
 git apply ~/fb5f19e95aca26485afba5a4082a41468e193098.patch
+cd ~/android/vendor/evolution
+git apply ~/f8aa0dfac15f5b8e784937cb2ad564fa5c300f1f.patch
 cd ~/android
 
 # Clone Device Specific(fallback)
@@ -59,14 +63,10 @@ ls device/oneplus/sdm845-common
 # Clone the Kernel Sources(fallback)
 git clone --depth=1 -b lineage-19.1 https://github.com/snnbyyds/android_kernel_oneplus_sdm845.git kernel/oneplus/sdm845
 
-#git clone https://github.com/radcolor/aarch64-elf.git prebuilts/gcc/linux-x86/aarch64/aarch64-elf
-#wget https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu/12.2.mpacbti-bet1/binrel/arm-gnu-toolchain-12.2.mpacbti-bet1-x86_64-arm-none-eabi.tar.xz
-#cd ~
-#wget https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8/+archive/refs/heads/idea133-weekly-release.tar.gz
-#cd ~/android
-mkdir prebuilts/gcc/linux-x86/arm/arm-eabi
-#cd prebuilts/gcc/linux-x86/arm/arm-eabi
-#tar -xpvf ~/idea133-weekly-release.tar.gz
+cd ~
+wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/ee5ad7f5229892ff06b476e5b5a11ca1f39bf3a9/clang-r365631c.tar.gz
+mkdir ~/android/prebuilts/clang/host/linux-x86/clang-r365631c
+cd ~/android/prebuilts/clang/host/linux-x86/clang-r365631c && tar -xpvf ~/clang-r365631c.tar.gz && ls -l
 
 cd ~/android
 # Additional(fallback)
