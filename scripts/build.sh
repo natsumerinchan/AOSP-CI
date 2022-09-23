@@ -1,14 +1,9 @@
 #!/bin/bash
 
-# Source Configs
-
 echo “Source Vars”
 export USE_CCACHE=1
 export CCACHE_SIZE=60G
 export ALLOW_MISSING_DEPENDENCIES=true
-export LC_ALL="C"
-
-##########################
 
 # A Function to Send Posts to Telegram
 telegram_message() {
@@ -29,15 +24,11 @@ else
     ccache -M ${CCACHE_SIZE}
 fi
 
-###################### fix?#####################
-
 echo '[DEBUG]rm -rf  system/sepolicy/prebuilts/api/33.0/private/property.te'
 rm -rf  system/sepolicy/prebuilts/api/33.0/private/property.te
 echo '[DEBUG]cp -r system/sepolicy/private/property.te system/sepolicy/prebuilts/api/33.0/private/'
 cp -r system/sepolicy/private/property.te system/sepolicy/prebuilts/api/33.0/private/
 ls system/sepolicy/prebuilts/api/33.0/private/
-#################################################
-
 
 # Prepare the Build Environment
 cd ~/android
@@ -62,9 +53,7 @@ cp -r ~/vendor_oneplus/fajita/proprietary/vendor system/
 cd ~/android/device/oneplus/fajita
 ./extract-files.sh ~/android/system_dump/
 
-
 cd ~/android
-
 lunch evolution_fajita-eng
 
 # Build!
