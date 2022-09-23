@@ -47,7 +47,8 @@ git clone -b lineage-19.1 https://github.com/snnbyyds/android_device_oneplus_sdm
 ls device/oneplus/sdm845-common
 
 # Clone the Kernel Sources
-git clone --depth=1 -b snow https://github.com/snnbyyds/kernel_oneplus_sdm845.git kernel/oneplus/sdm845
+#git clone --depth=1 -b snow https://github.com/snnbyyds/kernel_oneplus_sdm845.git kernel/oneplus/sdm845
+git clone --depth=1 -b lineage-20.0 https://github.com/snnbyyds/android_kernel_oneplus_sdm845.git kernel/oneplus/sdm845
 
 cd ~/android
 # Additional
