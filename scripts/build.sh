@@ -3,13 +3,6 @@
 # Source Configs
 
 echo “Source Vars”
-export REPO=https://github.com/Evolution-X/manifest
-export DEVICE=fajita
-export TYPE=eng
-export AOSP=evolution
-export BRANCH=tiramisu
-export FALLBACK=snow
-
 export USE_CCACHE=1
 export CCACHE_SIZE=60G
 export ALLOW_MISSING_DEPENDENCIES=true
@@ -49,15 +42,11 @@ ls system/sepolicy/prebuilts/api/33.0/private/
 # Prepare the Build Environment
 cd ~/android
 source build/envsetup.sh
-
-
 export ROOMSERVICE_BRANCHES=snow
 
 echo "extracting proprietary"
 mkdir ~/android/system_dump/
 cd ~/android/system_dump/
-pwd
-#git clone https://github.com/Evolution-X-Devices/vendor_oneplus.git ~/vendor_oneplus
 git clone -b cust https://github.com/snnbyyds/vendor_oneplus.git ~/vendor_oneplus
 mkdir system/
 mkdir system/vendor/
@@ -80,9 +69,7 @@ lunch evolution_fajita-eng
 
 # Build!
 echo 'Start Build!'
-
 mka evolution -j16
-
 
 # Exit
 exit 0
